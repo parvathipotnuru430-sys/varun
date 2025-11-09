@@ -1,0 +1,203 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --green-color:rgb(55, 219, 83);
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px ;
+    width: 100%;
+    color: black;
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    text-align: center;
+    
+}
+.headname{
+    width: 30%;
+}
+.header1{
+    display: flex;
+    width: 70%;
+    height: auto;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5%;
+    position: relative;
+}
+.material-symbols-outlined{
+    color: black;
+    text-rendering:optimizeLegibility;
+}
+.head-icons{
+    padding: 5px;
+    position: relative;
+}
+.head-icons::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: rgb(206, 200, 200);
+    transform: scale(0);
+    transition: .2s all ease;
+}
+.head-icons:hover:after{
+    left: 0;
+    right: 0;
+
+    transform: scale(1);
+}
+.status-head{
+    margin-left: 15px;
+}
+
+.status-bar{
+    margin: 7px;
+    width: 100%;
+    height: 120px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.status{
+    display: inline-block;
+    margin: 5px;
+    min-width: 75px;
+    height: 106px;
+    border: 1px solid rgb(60, 73, 60);
+    border-radius: 15px;
+    position: relative;
+    
+}
+.status-bar::-webkit-scrollbar{
+    display: none;
+}
+.status:nth-child(1)>.profile{
+    position: absolute;
+    margin: auto;
+    width: 60%;
+    height: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid var(--green-color);
+    border-radius: 50%;
+    background-image: url('david.jpg') center ;
+}
+.profile{
+    position: absolute;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 40%;
+    border: 2px solid var(--green-color);
+    border-radius: 50%;
+}
+.status:nth-child(1)>.profile::after{
+    content: '+';
+    width: 16px;
+    position: inherit;
+    border: 2px solid white;
+    border-radius: 50%;
+    bottom: -10%;
+    right: -10%;
+    color: rgb(0, 5, 1);
+    font-size: 16px;
+    text-align: center;
+    background-color: rgb(2, 80, 2);
+    border-color: 50%;
+
+    
+}
+.pimg{
+    border-radius: inherit;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+.channels{
+    display: flex;
+    flex: 1;
+}
+.chhead{
+    margin: 2px;
+    padding: 7px;
+    width: 90%;
+}
+.explore{
+    text-align: end;
+    margin: 2px;
+    padding: 7px 15px;
+    background-color: #d6cccc;
+    border-radius: 20px;
+}
+.chats{
+    display: flex;
+    flex-direction: column;
+}
+.chat{
+    position: relative;
+    padding: 10px;
+    display: flex;
+}
+.chprofile{
+    width: 50px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 1px solid rgb(98, 105, 98);
+}
+
+.chat-pre{
+    margin-left: .5em;
+    flex: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    cursor: pointer;
+}
+.chat>.profile,.chat-pre{
+    height: 50px;
+}
+.chat-pre>.name,.inner-pre{
+    line-height: 18px;
+
+    width: 90%;
+    border-radius: 10px;
+    height: 16px;
+    background-image: linear-gradient(to right bottom,#857a7a, #e2cccc);
+}
+
+.chat-pre>.name{
+    color: var(--text);
+    text-indent: .5em;
+    border-radius: 5px;
+}
