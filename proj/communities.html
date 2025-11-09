@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    <title>Document</title>
+</head>
+<style>
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-size: 15px;
+    background-color: var(--background);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+    .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px ;
+    width: 100%;
+    color: var(--green);
+    top: 0;
+    position: sticky;
+    background-color: var(--background);
+    z-index: 1;
+    text-align: center;
+    
+}
+.headname{
+    width: 30%;
+}
+.header1{
+    display: flex;
+    width: 70%;
+    height: auto;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5%;
+    position: relative;
+}
+.material-symbols-outlined{
+    color: black;
+    text-rendering:optimizeLegibility;
+}
+.head-icons{
+    padding: 5px;
+    position: relative;
+}
+.head-icons::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: rgb(206, 200, 200);
+    transform: scale(0);
+    transition: .2s all ease;
+}
+.head-icons:hover:after{
+    left: 0;
+    right: 0;
+
+    transform: scale(1);
+}
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        margin: 1em;
+    }
+    input[type=text]{
+        width: 90%;
+        height: 40px;
+        border-radius: 25px;
+        padding-left: 10px;
+
+    }
+    .button{
+        width: 200px;
+        text-align: center;
+        height: 40px;
+        border-radius: 25px;
+        border-color: green;
+    }
+</style>
+<script>
+    
+</script>
+<body>
+    <header class="header">
+        <div class="headname"><h2>communities</h2></div>
+    <div class="header1">
+        <a class="head-icons" href=""><span class="head-menu material-symbols-outlined">more_vert</span></a>
+    </div> 
+    </header>
+    <form action="">
+
+        <input id="input" type="text" class="name" placeholder="enter your name">
+        <input id="input" type="text" class="numbers" placeholder="add numbers">
+        <input id="input" type="text" class="type" placeholder="name of the community">
+        <button class="button">creat community</button>
+
+    </form>
+</body>
+</html>
